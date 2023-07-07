@@ -1,0 +1,14 @@
+version: "3.9"
+name: "go_rss_db"
+
+services:
+  postgres:
+    container_name: go_rss_db
+    image: postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=go-rss-db
+      - POSTGRES_HOST_AUTH_METHOD=password
+    ports:
+      - "5432:5432"
